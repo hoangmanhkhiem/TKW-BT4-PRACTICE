@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  --bg: #e8dfdb;
+  --light: #ffffff73;
+  --med: #ccc0ba;
+  --dark: #595959;
+  --dark-heavy: rgba(99, 73, 66, 0.29);
+  --main-color: #ff7710;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: var(--bg);
+}
+
+.container {
+  width: 350px;
+  background: var(--bg);
+  padding: 40px 30px;
+  border-radius: 100px 50px;
+  box-shadow: -4px -4px 8px var(--light), 3px 3px 6px var(--dark-heavy);
+}
+
+.container .text {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 2.18rem;
+  color: var(--dark);
+}
+
+.container .field {
+  display: flex;
+  height: 3.12rem;
+  width: 100%;
+  position: relative;
+}
+
+.field input {
+  height: 100%;
+  width: 100%;
+  padding-left: 2.81rem;
+  font-size: 16px;
+  outline: none;
+  background: var(--bg);
+  color: var(--main-color);
+  border: none;
+  border-radius: 1.52rem;
+  box-shadow: inset 1.5px 1.5px 4.5px var(--med), inset -4.5px -4.5px 9.5px var(--light);
+}
+
+
+.field:nth-child(2) {
+  margin-top: 1.25rem;
+}
+
+.field label {
+  position: absolute;
+  top: 50%;
+  left: 2.812em;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.field input:valid ~ label {
+  opacity: 0;
+}
+
+button {
+  margin: 0.9rem 0;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 18px;
+  font-weight: 600;
+  background: var(--bg);
+  border: 1px solid var(--dark);
+  color: var(--dark);
+  cursor: pointer;
+  border-radius: 1.52rem;
+}
+
+button:focus {
+  color: var(--main-color);
+  box-shadow: inset 1.5px 1.5px 4.5px var(--med), inset -4.5px -4.5px 9.5px var(--light);
+}
